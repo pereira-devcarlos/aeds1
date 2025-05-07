@@ -55,14 +55,21 @@ A disciplina está dividida em quatro unidades práticas:
 ```bash
 aeds1-pratica/
 ├── unidade1/
-│   └── exercicios_basicos.c
+│   └── condicionais_repeticoes
 ├── unidade2/
-│   └── vetores_matrizes.c
+│   └── vetores_matrizes
 ├── unidade3/
-│   └── modularizacao_projeto.c
+│   └── modularizacao_projeto
 ├── unidade4/
-│   └── ponteiros_dinamica.c
+│   └── ponteiros_dinamica
 ├── projetos/
 │   ├── projeto1.c
 │   └── projeto2.c
 └── README.md
+```
+
+---
+
+## Licença
+
+Este projeto é livre, licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
