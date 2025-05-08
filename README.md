@@ -53,7 +53,7 @@ A disciplina está dividida em quatro unidades práticas:
 ## Organização do repositório
 
 ```bash
-aeds1-pratica/
+aeds1/
 ├── unidade1/
 │   └── condicionais_repeticoes
 ├── unidade2/
