@@ -34,11 +34,11 @@ int main() {
         // Exibir menu
         cout << "\n\tMenu de Opções" << endl;
         cout << "O que deseja fazer com os dados das alturas?" << endl;
-        cout << "(1) Exibir todas as alturas" << endl;
-        cout << "(2) Buscar um valor e a quantidade que possui" << endl;
-        cout << "(3) Buscar valores em um determinado intervalo" << endl;
-        cout << "(4) Calcular a média das alturas e os valores acima" << endl;
-        cout << "(5) Sair" << endl;
+        cout << "1-Exibir todas as alturas" << endl;
+        cout << "2-Buscar um valor e a quantidade que possui" << endl;
+        cout << "3-Buscar valores em um determinado intervalo" << endl;
+        cout << "4-Calcular a média das alturas e os valores acima" << endl;
+        cout << "5-Sair" << endl;
         cout << "Digite a opção desejada: ";
         cin >> opcao;
         
