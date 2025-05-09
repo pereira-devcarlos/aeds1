@@ -1,0 +1,5 @@
+Qual e o comando para imprimir no console em C++?
+Como declarar um vetor de inteiros com 5 elementos em C++?
+Qual loop e ideal quando voce sabe o numero exato de repeticoes?
+Como incluir a biblioteca para usar vetores dinamicos em C++?
+Qual operador verifica igualdade em C++?
