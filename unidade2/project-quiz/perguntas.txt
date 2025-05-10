@@ -1,5 +1,36 @@
 Qual e o comando para imprimir no console em C++?
+A) print()
+B) console.log()
+C) cout << 
+D) printf()
+C
 Como declarar um vetor de inteiros com 5 elementos em C++?
+A) int vetor[5]; 
+B) vector<int> vetor(5);
+C) array<int, 5> vetor;
+D) int vetor = [5];
+A
 Qual loop e ideal quando voce sabe o numero exato de repeticoes?
+A) while
+B) do-while
+C) for
+D) repeat
+C
 Como incluir a biblioteca para usar vetores dinamicos em C++?
+A) #include <array>
+B) #include <vector> 
+C) #include <list>
+D) #include <dynamic>
+B
 Qual operador verifica igualdade em C++?
+A) =
+B) ==
+C) ===
+D) !=
+B
+O que if (x % 2 == 0) verifica?
+A) Se x e negativo
+B) Se x e par 
+C) Se x e primo
+D) Se x e zero
+B
