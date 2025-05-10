@@ -3,6 +3,7 @@
 #include <ctime>
 #include <stdlib.h>
 #include <string>
+#include <limits>
 
 using namespace std;
 
@@ -64,6 +65,7 @@ int main(){
                 if(resposta[random]==correta[random]){
                     cout << "\nParabens voce acertou!!!" << endl;
                 }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
         }
         else if (menu == 2){
