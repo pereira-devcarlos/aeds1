@@ -23,8 +23,10 @@ int main(){
     
     //Definindo a entrada das perguntas de um arquivo texto
     ifstream arquivoP("perguntas.txt");
-    if(!arquivoP.is_open()){
-        cout << "Erro: arquivo nao foi aberto corretamente!"<< endl;
+    //Coletar os dados dos jogadores em arquivo externo
+    ofstream arquivoE("jogadores.txt", ios::app); // ios::app para que não apague o que já estava escrito
+    if(!arquivoP.is_open() && !arquivoE.is_open()){
+        cout << "Erro: algum dos arquivo nao foram abertos corretamente!"<< endl;
         return 1;
     }
 
@@ -37,7 +39,8 @@ int main(){
     string correta[TAM];
     string resposta[TAM];
 
-    
+    cin >> player[0].name;
+    arquivoE << player[0].name << endl;
 
     menu = 2; // Valor para iniciar a repetição
     while (menu!=3){
