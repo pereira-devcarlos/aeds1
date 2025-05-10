@@ -22,10 +22,10 @@ Desenvolver um quiz de programação em C++ que:
 ## 📋 Estrutura do Projeto  
 ```plaintext
 quiz_cpp/
-├── main.cpp             # Código principal
 ├── README.md            # Este arquivo
+├── main.cpp             # Código principal
 └── perguntas.txt        # Banco de perguntas (opcional)
-```
+``` 
 
 ## 🔧 Como Usar  
 1. **Compilar e executar**:  
