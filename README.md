@@ -73,3 +73,8 @@ aeds1/
 ## Licença
 
 Este projeto é livre, licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+<div align="center">
+  <p></p>
+  <p>Desenvolvido por <strong>Carlos Pereira</strong></p>
+</div>
