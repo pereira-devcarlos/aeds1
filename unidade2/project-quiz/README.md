@@ -77,9 +77,11 @@ O quiz inclui questões como:
 **Bibliotecas C++**:  
 ```cpp
 #include <iostream>  // E/S básica
+#include <fstream>   // Leitura de dados externos
 #include <vector>    // Armazenamento
 #include <algorithm> // Ordenação
-#include <ctime>     // Aleatoriedade
+#include <ctime>     // Acesso ao horário
+#include <stdlib.h>  // Aleatoriedade
 ```
 
 **Conceitos aplicados**:  
