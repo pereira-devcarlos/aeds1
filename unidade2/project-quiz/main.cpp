@@ -7,26 +7,39 @@
 
 using namespace std;
 
+struct jogador{
+    string name;
+    int pontos;
+    int rank;
+};
+
+
 int main(){
     const int TAM=5; // Constante para definir os tamanhos dos vetores
     int menu;
-    
-    
 
     //Valores Aleatórios
     srand(time(NULL));  //Gerar seed de acordo com as horas do meu pc
     
     //Definindo a entrada das perguntas de um arquivo texto
     ifstream arquivoP("perguntas.txt");
+    if(!arquivoP.is_open()){
+        cout << "Erro: arquivo nao foi aberto corretamente!"<< endl;
+        return 1;
+    }
 
+    //Declarar os jogadores
+    jogador player[10];
+    
     //Declaração dos vetores
     string perguntas[TAM];
     string opcoes[TAM][4];
     string correta[TAM];
     string resposta[TAM];
 
+    
 
-    menu = 2;
+    menu = 2; // Valor para iniciar a repetição
     while (menu!=3){
             // Menu Inicial
         cout << "\n\tQuiz de Programacao" << endl;
@@ -50,6 +63,7 @@ int main(){
                 }
                 getline(arquivoP, correta[i]);
             }
+
             
             // Verificando as perguntas e alternativas
             cout << endl;
