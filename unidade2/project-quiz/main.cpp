@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> // E/S dados padrão
 #include <fstream>
 #include <ctime>
 #include <stdlib.h>
