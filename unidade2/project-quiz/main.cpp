@@ -1,7 +1,7 @@
 #include <iostream>  // E/S básica
 #include <fstream>   // Leitura de dados externos
 #include <vector>    // Armazenamento
-#include <algorithm> 
+#include <algorithm> // Ordenação
 #include <ctime>     
 #include <stdlib.h>  
 
