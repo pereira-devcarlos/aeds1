@@ -2,7 +2,7 @@
 #include <fstream>   // Leitura de dados externos
 #include <vector>    // Armazenamento
 #include <algorithm> // Ordenação
-#include <ctime>     
+#include <ctime>     // Acesso ao horário
 #include <stdlib.h>  
 
 using namespace std;
