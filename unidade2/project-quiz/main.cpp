@@ -1,9 +1,10 @@
 #include <iostream>  // E/S básica
 #include <fstream>   // Leitura de dados externos
-#include <vector>    
+#include <vector>    // Armazenamento
 #include <algorithm> 
 #include <ctime>     
 #include <stdlib.h>  
+
 using namespace std;
 
 struct jogador{
