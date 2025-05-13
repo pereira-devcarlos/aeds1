@@ -3,7 +3,7 @@
 #include <vector>    // Armazenamento
 #include <algorithm> // Ordenação
 #include <ctime>     // Acesso ao horário
-#include <stdlib.h>  
+#include <stdlib.h>  // Aleatoriedade
 
 using namespace std;
 
