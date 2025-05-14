@@ -26,8 +26,12 @@ int main() {
     // Declaração de variavel auxiliar
     int i, j;
 
+    // Definindo o arquivo como entrada de dados externos
     ifstream arquivo("alturas.txt");
-    
+    if(!arquivo.is_open()){
+        cout << "Erro: arquivo não foi aberto corretamente";
+        return 1;
+    }
     // Leitura do vetor
     i=0;
     while(i<TAM){
