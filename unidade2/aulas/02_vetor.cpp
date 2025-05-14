@@ -11,7 +11,7 @@
 using namespace std;
 
 // Constante para o tamanho dos arrays
-const int TAM = 10;
+const int TAM = 10; // Define o tamanho fixo dos vetores usados no programa
 
 int main() {
     // Declaração das variáveis
@@ -91,7 +91,7 @@ int main() {
                 i=0;
                 j=0;
                 while(i<TAM){
-                    // Condicional para o intervalo determinado
+                    // Verifica se o valor está dentro do intervalo
                     if(alturas[i] > intervalo[0] && alturas[i] < intervalo[1]){
                         inter++;
                         contador[j]= alturas[i];
@@ -100,7 +100,7 @@ int main() {
                     i++;
                 }
                 cout << "\nQuantidade de valores entre " << intervalo[0] << " e " << intervalo[1] << " são: " << inter << endl;
-                // Mostrar os valores entre esse intervalo
+                // Exibir os valores entre esse intervalo
                 i=0;
                 while(i<inter){
                     cout << "A " << i+1 << "ª altura é: " << contador[i] << endl;
