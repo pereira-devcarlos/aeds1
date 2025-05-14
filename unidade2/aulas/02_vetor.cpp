@@ -163,14 +163,16 @@ int main() {
                 }
                 break;
             case 7:
+                // Buscar valores repetidos em posições consecutivas
                 cout << endl;
-                for(i=0; i<TAM-1; i++){
+                for(i=0; i<TAM-1; i++){ // TAM-1 para não ultrapassar o vetor
                     if(alturas[i]== alturas[i+1]){
                         cout << "O valor " << alturas[i] << " está se repetindo na posição " << i+1 << " e " << i+2 << endl;
                     }
                 }
                 break;
-            default:
+            
+            default:    // Opção inválida (não faz nada)
                 break;
         }
     }
