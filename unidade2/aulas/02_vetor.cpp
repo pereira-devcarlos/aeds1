@@ -41,7 +41,7 @@ int main() {
     }
     
     while(opcao != 0){
-                // Exibir menu
+            // Exibir menu
         cout << "\n\tMenu de Opções" << endl;
         cout << "O que deseja fazer com os dados das alturas?" << endl;
         cout << "[1]-Exibir todas as alturas" << endl;
@@ -65,48 +65,7 @@ int main() {
                     i++;
                 }
                 break;
-            case 3:
-                //Usuário deseja saber quantas alturas tem igual a dele
-                cout << "\nDigite o valor que deseja buscar: ";
-                cin >> user;
-                i=0;
-                iguais=0;
-                while(i<TAM){
-                    if(user==alturas[i]){
-                        iguais++;
-                    }
-                    i++;
-                }
-                cout << "\nFoi encontrado " << iguais << " alturas iguais a " << user << endl;
-                break;
-            case 4:
-                // Buscar quntos valores estão em um intervalo
-                cout << "\nIntervalo que deseja buscar" << endl;
-                cout << "\nDigite o 1º valor do intervalo(menor valor): ";
-                cin >> intervalo[0];
-                cout << "\nDigite o 2º valor do intervalo(maior valor): ";
-                cin >> intervalo[1];
-
-                inter=0;
-                i=0;
-                j=0;
-                while(i<TAM){
-                    // Verifica se o valor está dentro do intervalo
-                    if(alturas[i] > intervalo[0] && alturas[i] < intervalo[1]){
-                        inter++;
-                        contador[j]= alturas[i];
-                        j++;
-                    }
-                    i++;
-                }
-                cout << "\nQuantidade de valores entre " << intervalo[0] << " e " << intervalo[1] << " são: " << inter << endl;
-                // Exibir os valores entre esse intervalo
-                i=0;
-                while(i<inter){
-                    cout << "A " << i+1 << "ª altura é: " << contador[i] << endl;
-                    i++;
-                }
-                break;
+            
             case 2:
                 // Calcular a média das alturas
                 i=0;
@@ -140,6 +99,51 @@ int main() {
                     i++;
                 }
                 break;
+            
+            case 3:
+                //Usuário deseja saber quantas alturas tem igual a dele
+                cout << "\nDigite o valor que deseja buscar: ";
+                cin >> user;
+                i=0;
+                iguais=0;
+                while(i<TAM){
+                    if(user==alturas[i]){
+                        iguais++;
+                    }
+                    i++;
+                }
+                cout << "\nFoi encontrado " << iguais << " alturas iguais a " << user << endl;
+                break;
+            
+            case 4:
+                // Buscar quntos valores estão em um intervalo
+                cout << "\nIntervalo que deseja buscar" << endl;
+                cout << "\nDigite o 1º valor do intervalo(menor valor): ";
+                cin >> intervalo[0];
+                cout << "\nDigite o 2º valor do intervalo(maior valor): ";
+                cin >> intervalo[1];
+
+                inter=0;
+                i=0;
+                j=0;
+                while(i<TAM){
+                    // Verifica se o valor está dentro do intervalo
+                    if(alturas[i] > intervalo[0] && alturas[i] < intervalo[1]){
+                        inter++;
+                        contador[j]= alturas[i];
+                        j++;
+                    }
+                    i++;
+                }
+                cout << "\nQuantidade de valores entre " << intervalo[0] << " e " << intervalo[1] << " são: " << inter << endl;
+                // Exibir os valores entre esse intervalo
+                i=0;
+                while(i<inter){
+                    cout << "A " << i+1 << "ª altura é: " << contador[i] << endl;
+                    i++;
+                }
+                break;
+            
             case 5:
                 // Buscar primeira ocorrência de um valor
                 cout << "\nQual o valor você deseja buscar a posição: ";
@@ -151,6 +155,7 @@ int main() {
                     }
                 }
                 break;
+            
             case 6:
                 // Buscar todas as ocorrências de um valor
                 cout << "Qual o valor você deseja buscar a posição: ";
@@ -162,6 +167,7 @@ int main() {
                     }
                 }
                 break;
+            
             case 7:
                 // Buscar valores repetidos em posições consecutivas
                 cout << endl;
