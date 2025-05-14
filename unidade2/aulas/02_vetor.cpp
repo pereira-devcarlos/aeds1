@@ -141,16 +141,18 @@ int main() {
                 }
                 break;
             case 5:
+                // Buscar primeira ocorrência de um valor
                 cout << "\nQual o valor você deseja buscar a posição: ";
                 cin >> user;
                 for(i=0; i<TAM; i++){
                     if(user == alturas[i]){
                         cout << "\nA primeira posição do valor " << user << " está na: " << i+1 << "ª" << endl;
-                        i = TAM + 1;
+                        i = TAM + 1; // Força a saída do loop após encontrar o primeiro
                     }
                 }
                 break;
             case 6:
+                // Buscar todas as ocorrências de um valor
                 cout << "Qual o valor você deseja buscar a posição: ";
                 cin >> user;
                 cout << "\nO valor de " << user << " estão na: " << endl;
