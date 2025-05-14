@@ -104,7 +104,7 @@ int main() {
                 }
                 break;
             case 2:
-                                // Calcular a média das alturas
+                // Calcular a média das alturas
                 i=0;
                 media=0;
                 while(i<TAM){
