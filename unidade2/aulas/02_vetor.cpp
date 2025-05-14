@@ -10,10 +10,13 @@
 
 using namespace std;
 
+// Constante para o tamanho dos arrays
+const int TAM = 10;
+
 int main() {
     // Declaração das variáveis
-    float alturas[10];
-    float contador[10];
+    float alturas[TAM];
+    float contador[TAM];
     float intervalo[2];
     int opcao=5;
     
@@ -27,7 +30,7 @@ int main() {
     
     // Leitura do vetor
     i=0;
-    while(i<10){
+    while(i<TAM){
         cout << "Digite o " << i+1 << "º valor: ";
         arquivo >> alturas[i];
         i++;
@@ -53,7 +56,7 @@ int main() {
                 cout << "\n" << endl;
                 // Escrita do vetor
                 i=0;
-                while(i<10){
+                while(i<TAM){
                     cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
                     i++;
                 }
@@ -64,7 +67,7 @@ int main() {
                 cin >> user;
                 i=0;
                 iguais=0;
-                while(i<10){
+                while(i<TAM){
                     if(user==alturas[i]){
                         iguais++;
                     }
@@ -83,7 +86,7 @@ int main() {
                 inter=0;
                 i=0;
                 j=0;
-                while(i<10){
+                while(i<TAM){
                     // Condicional para o intervalo determinado
                     if(alturas[i] > intervalo[0] && alturas[i] < intervalo[1]){
                         inter++;
@@ -104,7 +107,7 @@ int main() {
                                 // Calcular a média das alturas
                 i=0;
                 media=0;
-                while(i<10){
+                while(i<TAM){
                     media+= alturas[i];
                     i++;
                 }
@@ -115,7 +118,7 @@ int main() {
                 i=0;
                 j=0;
                 acima=0;
-                while(i<10){
+                while(i<TAM){
                     if(alturas[i] > media){
                         acima++;
 
@@ -136,10 +139,10 @@ int main() {
             case 5:
                 cout << "\nQual o valor você deseja buscar a posição: ";
                 cin >> user;
-                for(i=0; i<10; i++){
+                for(i=0; i<TAM; i++){
                     if(user == alturas[i]){
                         cout << "\nA primeira posição do valor " << user << " está na: " << i+1 << "ª" << endl;
-                        i = 11;
+                        i = TAM + 1;
                     }
                 }
                 break;
@@ -147,7 +150,7 @@ int main() {
                 cout << "Qual o valor você deseja buscar a posição: ";
                 cin >> user;
                 cout << "\nO valor de " << user << " estão na: " << endl;
-                for(i=0, j=0; i<10; i++){
+                for(i=0, j=0; i<TAM; i++){
                     if(alturas[i] == user){
                         cout << "Posição: " << i+1 << endl;
                     }
@@ -155,7 +158,7 @@ int main() {
                 break;
             case 7:
                 cout << endl;
-                for(i=0; i<10; i++){
+                for(i=0; i<TAM-1; i++){
                     if(alturas[i]== alturas[i+1]){
                         cout << "O valor " << alturas[i] << " está se repetindo na posição " << i+1 << " e " << i+2 << endl;
                     }
