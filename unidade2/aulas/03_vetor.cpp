@@ -8,10 +8,13 @@
 #include <iostream>
 #include <fstream>
 
+//Corrigir o case 6
+
 using namespace std;
 
 // Constante para o tamanho dos arrays
 const int TAM = 10; // Define o tamanho fixo dos vetores usados no programa
+int qtd=10; //Definindo a quantidade válida do tamanho do vetor
 
 int main() {
     // Declaração das variáveis
@@ -151,12 +154,13 @@ int main() {
                         cout << "Você deseja remover ela [1]Sim ou [2]Não: ";
                         cin >> j;
                         if(j == 1){
+                            qtd--;
                             while(i<(TAM-1)){
                                 alturas[i] = alturas[i+1];
                                 i++;
                             }
                             cout << endl << "Resultado" << endl;
-                            for(i=0; i<TAM-1; i++){
+                            for(i=0; i<qtd; i++){
                                 cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
                             }
                         }else{
@@ -172,10 +176,28 @@ int main() {
                 cout << "Qual o valor você deseja buscar a posição: ";
                 cin >> user;
                 cout << "\nO valor de " << user << " estão na: " << endl;
-                for(i=0, j=0; i<TAM; i++){
+                i=0;
+                while(i<TAM){
                     if(alturas[i] == user){
                         cout << "Posição: " << i+1 << endl;
+                        cout << "Deseja remover ela [1]Sim ou [2]Não:";
+                        cin >> j;
+                        if(j == 1){
+                            qtd--;
+                            j=i;
+                            i=0;
+                            while(j<(TAM-1)){
+                                alturas[j] = alturas[j+1];
+                                j++;
+                            }
+                        }
                     }
+                    i++;
+                }
+                
+                cout << endl << "Resultado" << endl;
+                for(i=0; i<qtd; i++){
+                    cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
                 }
                 break;
             
