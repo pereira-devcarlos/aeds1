@@ -54,6 +54,7 @@ int main() {
         cout << "[8]-Inverter os valores do vetor(1º c/o último, 2º c/o penúltimo,...)" << endl;
         cout << "[9]-Adicionar um valor para todos os elementos" << endl;
         cout << "[10]-Adicionar valores a todos elementos não divíveis por 3" << endl;
+        cout << "[11]-Remova a 1º ocorrência de um valor" << endl;
         cout << "[0]-Sair" << endl;
         cout << "Digite a opção desejada: ";
         cin >> opcao;
@@ -148,9 +149,23 @@ int main() {
                 for(i=0; i<TAM; i++){
                     if(user == alturas[i]){
                         cout << "\nA primeira posição do valor " << user << " está na: " << i+1 << "ª" << endl;
-                        i = TAM + 1; // Força a saída do loop após encontrar o primeiro
+                        cout << "Você deseja remover ela [1]Sim ou [2]Não: ";
+                        cin >> j;
+                        if(j == 1){
+                            while(i<(TAM-1)){
+                                alturas[i] = alturas[i+1];
+                                i++;
+                            }
+                            cout << endl << "Resultado" << endl;
+                            for(i=0; i<TAM-1; i++){
+                                cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
+                            }
+                        }else{
+                            i = TAM + 1; // Força a saída do loop após encontrar o primeiro
+                        }
                     }
                 }
+                
                 break;
             
             case 6:
@@ -204,18 +219,26 @@ int main() {
 
             // Descartando já que não podemos utilizar o resto da div, pois estamos usandos float
             case 10:
+                /*
                 cout << "Digite o valor que será adicionado nos elementos não divisíveis por 3: ";
                 cin >> user;
                 
                 cout << "\nElementos adicionados com " << user << endl;
                 for(i=0; i<TAM; i++){
-                    /*
+                    
                     if(alturas[i]%3 == 0){
                         alturas[i]+= user;
                         cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
-                    }*/
-                }
+                    }
+                }*/
                 break;
+            case 11:
+                for(i=0; i<TAM; i++){
+                    
+                }
+                
+                break;
+                
             default:    // Opção inválida (não faz nada)
                 break;
         }
