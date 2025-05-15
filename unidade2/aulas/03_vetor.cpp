@@ -48,13 +48,12 @@ int main() {
         cout << "[2]-Calcular a média das alturas e os valores acima" << endl;
         cout << "[3]-Buscar um valor e a quantidade que possui" << endl;
         cout << "[4]-Buscar valores em um determinado intervalo" << endl;
-        cout << "[5]-Buscar a posição da primeira ocorrência de um valor" << endl;
+        cout << "[5]-Buscar ou remover a posição da primeira ocorrência de um valor" << endl;
         cout << "[6]-Buscar todas as posição de um determinado valor" << endl;
         cout << "[7]-Buscar as posições onde os valores se repete com a posição seguinte" << endl;
         cout << "[8]-Inverter os valores do vetor(1º c/o último, 2º c/o penúltimo,...)" << endl;
         cout << "[9]-Adicionar um valor para todos os elementos" << endl;
         cout << "[10]-Adicionar valores a todos elementos não divíveis por 3" << endl;
-        cout << "[11]-Remova a 1º ocorrência de um valor" << endl;
         cout << "[0]-Sair" << endl;
         cout << "Digite a opção desejada: ";
         cin >> opcao;
