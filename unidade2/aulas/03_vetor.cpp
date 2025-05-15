@@ -53,7 +53,7 @@ int main() {
         cout << "[7]-Buscar as posições onde os valores se repete com a posição seguinte" << endl;
         cout << "[8]-Inverter os valores do vetor(1º c/o último, 2º c/o penúltimo,...)" << endl;
         cout << "[9]-Adicionar um valor para todos os elementos" << endl;
-        cout << "[10]-Adicionar valores a todos elementos não divíveis por 3"
+        cout << "[10]-Adicionar valores a todos elementos não divíveis por 3" << endl;
         cout << "[0]-Sair" << endl;
         cout << "Digite a opção desejada: ";
         cin >> opcao;
