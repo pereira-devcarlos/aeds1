@@ -1,6 +1,6 @@
 # 📝 Lista de Exercícios – Vetores
 
-Bem-vindo(a) à lista de exercícios sobre **vetores (arrays)** desenvolvida para a disciplina de **Algoritmos e Estruturas de Dados I (AEDS I)**.
+Bem-vindo(a) à lista de exercícios sobre **vetores (arrays)** desenvolvida para a disciplina de **Algoritmos e Estruturas de Dados I (AEDs I)**.
 
 ---
 
