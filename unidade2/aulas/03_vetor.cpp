@@ -240,7 +240,9 @@ int main() {
                     }
                 }*/
                 break;
-            default:    // Opção inválida (não faz nada)
+            
+            default:    // Se nenhum case for acionado, exibe está mensagem de erro
+                cout << "Erro: opção inválida" << endl;
                 break;
         }
     }
