@@ -36,11 +36,9 @@ int main() {
         return 1;
     }
     // Leitura do vetor
-    i=0;
-    while(i<TAM){
+    for(i=0; i<TAM; i++){
         cout << "Digite o " << i+1 << "º valor: ";
         arquivo >> alturas[i];
-        i++;
     }
     
     while(opcao != 0){
@@ -65,10 +63,8 @@ int main() {
             case 1:
                 cout << "\n" << endl;
                 // Escrita do vetor
-                i=0;
-                while(i<TAM){
+                for(i=0; i<TAM; i++){
                     cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
-                    i++;
                 }
                 break;
             
@@ -82,13 +78,11 @@ int main() {
                 cout << "\nO valor da média: " << media << endl;
 
                 // Contar os valores acima da media
-                i=0;
                 j=0;
                 acima=0;
                 for(i=0; i<TAM; i++){
                     if(alturas[i] > media){
                         acima++;
-
                         contador[j] = alturas[i];
                         j++;
                     }
@@ -104,13 +98,11 @@ int main() {
                 //Usuário deseja saber quantas alturas tem igual a dele
                 cout << "\nDigite o valor que deseja buscar: ";
                 cin >> user;
-                i=0;
                 iguais=0;
-                while(i<TAM){
+                for(i=0; i<TAM; i++){
                     if(user==alturas[i]){
                         iguais++;
                     }
-                    i++;
                 }
                 cout << "\nFoi encontrado " << iguais << " alturas iguais a " << user << endl;
                 break;
@@ -124,23 +116,19 @@ int main() {
                 cin >> intervalo[1];
 
                 inter=0;
-                i=0;
                 j=0;
-                while(i<TAM){
+                for(i=0; i<TAM; i++){
                     // Verifica se o valor está dentro do intervalo
                     if(alturas[i] > intervalo[0] && alturas[i] < intervalo[1]){
                         inter++;
                         contador[j]= alturas[i];
                         j++;
                     }
-                    i++;
                 }
                 cout << "\nQuantidade de valores entre " << intervalo[0] << " e " << intervalo[1] << " são: " << inter << endl;
                 // Exibir os valores entre esse intervalo
-                i=0;
-                while(i<inter){
+                for(i=0; i<inter; i++){
                     cout << "A " << i+1 << "ª altura é: " << contador[i] << endl;
-                    i++;
                 }
                 break;
             
@@ -155,16 +143,15 @@ int main() {
                         cin >> j;
                         if(j == 1){
                             qtd--;
-                            while(i<(TAM-1)){
-                                alturas[i] = alturas[i+1];
-                                i++;
+                            for(int k=i; k<TAM-1; k++){
+                                alturas[k] = alturas[k+1];
                             }
                             cout << endl << "Resultado" << endl;
-                            for(i=0; i<qtd; i++){
-                                cout << "O " << i+1 << "º valor é: " << alturas[i] << endl;
+                            for(int k=0; k<qtd; k++){
+                                cout << "O " << k+1 << "º valor é: " << alturas[k] << endl;
                             }
                         }else{
-                            i = TAM + 1; // Força a saída do loop após encontrar o primeiro
+                            break; // Força a saída do loop após encontrar o primeiro
                         }
                     }
                 }
@@ -184,12 +171,12 @@ int main() {
                         cin >> j;
                         if(j == 1){
                             qtd--;
-                            j=i;
-                            i=0;
-                            while(j<(TAM-1)){
-                                alturas[j] = alturas[j+1];
-                                j++;
+                            int k;
+                            for(k=i; k<TAM-1; k++){
+                                alturas[k] = alturas[k+1];
                             }
+                            // Não incrementa i para verificar o novo valor na posição i
+                            continue;
                         }
                     }
                     i++;
