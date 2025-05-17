@@ -240,13 +240,6 @@ int main() {
                     }
                 }*/
                 break;
-            case 11:
-                for(i=0; i<TAM; i++){
-                    
-                }
-                
-                break;
-                
             default:    // Opção inválida (não faz nada)
                 break;
         }
