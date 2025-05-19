@@ -18,5 +18,13 @@ int main() {
                 contador++; // Incrementa se encontrar repetição
             }
         }
+
+        // Se não encontrou nenhuma repetição, adiciona ao vetor de únicos
+        if (contador == 0) {
+            unicos[qtd_unicos] = vetor[i];
+            qtd_unicos++;
+        }
+    }
+
     return 0;
 }
