@@ -12,5 +12,11 @@ int main() {
     for (int i = 0; i < TAM; i++) {
         int contador = 0; // Conta quantas vezes vetor[i] já apareceu em unicos
 
+        // Verifica se o elemento já está no vetor de únicos
+        for (int j = 0; j < qtd_unicos; j++) {
+            if (vetor[i] == unicos[j]) {
+                contador++; // Incrementa se encontrar repetição
+            }
+        }
     return 0;
 }
