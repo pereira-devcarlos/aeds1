@@ -33,5 +33,12 @@ int main() {
     }
     cout << endl;
 
+    // Exibe os valores únicos
+    cout << "Vetor com valores unicos: ";
+    for (int i = 0; i < qtd_unicos; i++) {
+        cout << unicos[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }
