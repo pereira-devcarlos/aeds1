@@ -26,5 +26,12 @@ int main() {
         }
     }
 
+    // Exibe o vetor original
+    cout << "Vetor original: ";
+    for (int i = 0; i < TAM; i++) {
+        cout << vetor[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }
