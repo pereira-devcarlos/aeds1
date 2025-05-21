@@ -63,9 +63,20 @@ int main() {
         if(nameComplete[i]>= 97) // Condição para decrementar apenas as letra minúsculas
             nameComplete[i]-= 32;
     }
+    
     // Exibindo o nome completo em maiúsculo
     printf("\n Nome Completo em Maiúsculo: %s\n", nameComplete);
     
+    // Retornar as letras em minúsculas, menos as letra iniciais
+    for(i=1; nameComplete[i]!=' '; i++){
+        nameComplete[i]+= 32;
+    }
+    i++; // Incrementando para manter o espaço ' ', pulando direto para o sobrenome 
+    for(i+=1; nameComplete[i]!=' '; i++){
+        nameComplete[i]+= 32;
+    }
+    // Exibindo o nome completo em minúsculo
+    printf("\n Nome Completo em Minúsculo: %s\n", nameComplete);
     return 0;
 }
 
