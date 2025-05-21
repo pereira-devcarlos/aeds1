@@ -80,7 +80,7 @@ Posição 5 (valor: 5)
 
 ## 👤 Autor
 
-- **Nome:** _Seu Nome_
+- **Nome:** Carlos Eduardo Pereira
 - **Matrícula:** 2024.2.08.001
 
 ---
