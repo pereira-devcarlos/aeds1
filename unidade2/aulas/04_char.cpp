@@ -125,7 +125,7 @@ int main() {
         }
     }
 
-    // Exibir o resultado da busca
+    // Exibir os resultados da busca
     if(found)
         printf("\nA sequência '%s' foi encontrada no nome completo.\n", nome);
     else
