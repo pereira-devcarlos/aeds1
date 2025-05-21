@@ -58,6 +58,14 @@ int main() {
     // Exibindo o nome completo
     printf("\n Nome Completo: %s\n", nameComplete);
     
+    // Retirando 32 bits para transformar as letras em Maiúsculas
+    for(i=0; i<30; i++){
+        if(nameComplete[i]>= 97) // Condição para decrementar apenas as letra minúsculas
+            nameComplete[i]-= 32;
+    }
+    // Exibindo o nome completo em maiúsculo
+    printf("\n Nome Completo em Maiúsculo: %s\n", nameComplete);
+    
     return 0;
 }
 
