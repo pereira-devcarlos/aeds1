@@ -1,4 +1,4 @@
-# Projeto: Cena Gráfica — AEDSI
+# Projeto: Cena Gráfica — AEDs I
 
 > **Objetivo:**  
 Gerar a descrição de uma cena gráfica composta por figuras geométricas, salvar os dados em arquivo e calcular a área e o volume totais da cena.
