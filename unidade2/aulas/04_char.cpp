@@ -91,19 +91,45 @@ int main() {
     printf("\n Digite a oque deseja buscar no nome completo: ");
     scanf("%s", &nome); // Nome = ao que o user deseja buscar
     
-    // Econtrar uma sequência de caracteres em um nome completo
-    for(j=0,i=0; i<60; i++){
-        sobreNome[i] = '\0';
-        if(nameComplete[i] == nome[j]){
-            // sobreNome usada para guarda os dados que se repetem
-            sobreNome[j] = nameComplete[i];
-            j++;
-        }
-        if(sobreNome==nome){
-            i = 61;
-        }
+            // Econtrar uma sequência de caracteres em um nome completo
+    // Utilizando o algoritmo clássico de busca de substring (case sensitive)!!!
+    int len_nameComplete = 0;
+    
+    // Calculando o tamanho do nameComplete e nome
+    while(nameComplete[len_nameComplete] != '\0'){
+        len_nameComplete++;
     }
     
-    printf("\n Nome Repete: %s\n", sobreNome);
+    int len_nome = 0;
+    while(nome[len_nome] != '\0'){ 
+        len_nome++;
+    }
+
+    // Busca da substring no nameComplete
+    int found = 0; // Variável para indicar se encontramos a substring
+
+    // Percorre cada posição possível de início da substring dentro do nameComplete
+    for(i = 0; i <= len_nameComplete - len_nome; i++) {
+        int match = 1; // Assume que vai encontrar a substring a partir dessa posição
+        
+        // Compara cada caractere da substring com o trecho correspondente do nameComplete
+        for(j = 0; j < len_nome; j++) {
+            if(nameComplete[i + j] != nome[j]) { // Se algum caractere for diferente...
+                match = 0; // ...não é uma correspondência
+                break; // Para de comparar, não adianta continuar
+            }
+        }
+        if(match) { // Se todos os caracteres combinaram
+            found = 1; // Marca que encontramos a substring
+            break; // Não precisa continuar procurando
+        }
+    }
+
+    // Exibir o resultado da busca
+    if(found)
+        printf("\nA sequência '%s' foi encontrada no nome completo.\n", nome);
+    else
+        printf("\nA sequência '%s' NÃO foi encontrada no nome completo.\n", nome);
+    
     return 0;
 }
