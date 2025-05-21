@@ -88,6 +88,22 @@ int main() {
     // Exibindo o nome completo sem espaço entre nome e o sobrenome
     printf("\n Nome Completo sem espaçamento: %s\n", nameComplete);
     
+    printf("\n Digite a oque deseja buscar no nome completo: ");
+    scanf("%s", &nome); // Nome = ao que o user deseja buscar
+    
+    // Econtrar uma sequência de caracteres em um nome completo
+    for(j=0,i=0; i<60; i++){
+        sobreNome[i] = '\0';
+        if(nameComplete[i] == nome[j]){
+            // sobreNome usada para guarda os dados que se repetem
+            sobreNome[j] = nameComplete[i];
+            j++;
+        }
+        if(sobreNome==nome){
+            i = 61;
+        }
+    }
+    
+    printf("\n Nome Repete: %s\n", sobreNome);
     return 0;
 }
-
