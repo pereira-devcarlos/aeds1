@@ -77,6 +77,17 @@ int main() {
     }
     // Exibindo o nome completo em minúsculo
     printf("\n Nome Completo em Minúsculo: %s\n", nameComplete);
+    
+    // Retirar os espaços do nome completo
+    for(i=0; i<60; i++){
+        if(nameComplete[i]==' ')
+            for(i=i;i<60-1; i++){
+                nameComplete[i] = nameComplete[i+1];
+            }
+    }
+    // Exibindo o nome completo sem espaço entre nome e o sobrenome
+    printf("\n Nome Completo sem espaçamento: %s\n", nameComplete);
+    
     return 0;
 }
 
