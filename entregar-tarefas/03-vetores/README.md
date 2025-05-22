@@ -70,11 +70,8 @@ Posição 5 (valor: 5)
 
 ## 🛠️ Observações
 
-- O código **não utiliza** o tipo `bool` nem a estrutura `do-while`.
-- Todas as mensagens do menu estão **acentuadas corretamente em português**.
 - O código está **totalmente comentado** para facilitar o entendimento.
-- O vetor é de **tamanho fixo** (100 elementos).
-- Projeto pronto para ser enviado ou adaptado para futuras demandas!
+- O vetor é de **tamanho máximo** (100 elementos).
 
 ---
 
