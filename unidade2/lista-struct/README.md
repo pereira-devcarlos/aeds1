@@ -1,6 +1,6 @@
 # Exercícios de Structs em C++
 
-Este repositório contém uma sequência de exercícios práticos sobre structs (registros) em C++. Os exercícios foram organizados em ordem crescente de dificuldade, abordando desde a declaração básica até a manipulação de arrays, filtragem de registros e structs aninhadas. São ideais para quem já conhece condicionais, laços de repetição e vetores, mas ainda não estudou funções em C++.
+Esta pasta contém uma sequência de exercícios práticos sobre structs (registros) em C++. Os exercícios foram organizados em ordem crescente de dificuldade, abordando desde a declaração básica até a manipulação de arrays, filtragem de registros e structs aninhadas. São ideais para quem já conhece condicionais, laços de repetição e vetores.
 
 ## Objetivo
 
