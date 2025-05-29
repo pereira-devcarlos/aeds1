@@ -11,7 +11,7 @@ struct Aluno{ // Definindo a struct Aluno
 };
 
 int main(){
-    const int TAM = 4;
+    const int TAM = 5;
     Aluno aluno[TAM]; // Declarando um array de Aluno
     int i; // Variável de controle para o loop
 
@@ -63,6 +63,7 @@ int main(){
             break;
         case 2:
             // Exibindo a média das notas
+            cout << "------------------------" << endl;            
             cout << "\nA media das notas da turma e: " << media << endl;
             cout << "------------------------" << endl;            
             break;
@@ -70,7 +71,7 @@ int main(){
             cout << "\nAlunos Aprovados:" << endl;
             for (int j=0 , i = 0; i < TAM; i++){
                 if(aluno[i].nota>=7){
-                    cout << "Aluno " << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
+                    cout << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
                 }else{
                     j++;
                     if(j>=TAM)
@@ -82,7 +83,7 @@ int main(){
             cout << "\nAlunos Reprovados:" << endl;
             for (int j=0 , i = 0; i < TAM; i++){
                 if(aluno[i].nota<7){
-                    cout << "Aluno " << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
+                    cout << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
                 }else{
                     j++;
                     if(j>=TAM)
