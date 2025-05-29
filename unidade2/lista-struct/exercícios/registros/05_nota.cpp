@@ -68,30 +68,39 @@ int main(){
             cout << "------------------------" << endl;            
             break;
         case 3:
+            // Exibe os alunos aprovados (nota >= 7)
             cout << "\nAlunos Aprovados:" << endl;
             for (int j=0 , i = 0; i < TAM; i++){
                 if(aluno[i].nota>=7){
+                    // Se o aluno foi aprovado, mostra nome e nota
                     cout << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
                 }else{
+                    // Conta quantos não foram aprovados
                     j++;
+                    // Se nenhum aluno foi aprovado, exibe mensagem
                     if(j>=TAM)
                         cout << "Nessa turma nenhum aluno foi aprovado." << endl;
                 }
             }
             break;
         case 4:
+            // Exibe os alunos reprovados (nota < 7)
             cout << "\nAlunos Reprovados:" << endl;
             for (int j=0 , i = 0; i < TAM; i++){
                 if(aluno[i].nota<7){
+                    // Se o aluno foi reprovado, mostra nome e nota
                     cout << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
                 }else{
+                    // Conta quantos não foram reprovados
                     j++;
+                    // Se nenhum aluno foi reprovado, exibe mensagem
                     if(j>=TAM)
                         cout << "Nessa turma nenhum aluno foi reprovado." << endl;
                 }
             }            
             break;
         default:
+            // Caso o usuário digite uma opção inválida
             cout << "Erro: opcao inexistente, porfavor escolha uma opcao valida!" << endl;
             break;
         }
