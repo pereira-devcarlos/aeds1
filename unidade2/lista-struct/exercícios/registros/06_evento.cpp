@@ -34,8 +34,12 @@ int main(){
         cout << "Digite o ano do evento " << i+1 << ": ";
         cin >> event[i].data.ano;
     }
-
-
+    cout << endl;
+    
+    // Exibir os eventos registrados 
+    for (int i = 0; i < TAM; i++){
+        cout << "O evento " << event[i].nome << " ira acontecer dia " << event[i].data.dia << "/" << event[i].data.mes << "/" << event[i].data.ano << endl;        
+    }
 
     return 0;
 }
