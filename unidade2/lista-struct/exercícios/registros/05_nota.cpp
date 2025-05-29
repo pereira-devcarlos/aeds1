@@ -28,6 +28,15 @@ int main(){
         soma += aluno[i].nota; // Somando as notas
     }
 
+    // Exibir Menu
+    while(opcao != 0){
+        cout << "Menu de Opçoes:" << endl;
+        cout << "[1]-Exibir dados dos alunos" << endl;
+        cout << "[2]-Exibir a media das notas da turma" << endl;
+        cout << "[3]-Exibir dados dos alunos aprovados" << endl;
+        cout << "[4]-Exibir dados dos alunos reprovados" << endl;
+    }
+
     cout << "\nDados dos alunos:" << endl;
     // Imprimindo os dados dos alunos
     for (i = 0; i < TAM; i++){
