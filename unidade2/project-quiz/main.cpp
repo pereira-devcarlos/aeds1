@@ -44,58 +44,60 @@ int main(){
     arquivoE << player[0].name << endl;
 
     menu = 2; // Valor para iniciar a repetição
-    while (menu!=3){
-            // Menu Inicial
+    while (menu != 3) {
+        // Menu Inicial
         cout << "\n\tQuiz de Programacao" << endl;
         cout << "[1] Jogar" << endl << "[2] Ranking" << endl << "[3] Sair" << endl;
         cout << "Digite a opcao que voce deseja: ";
         cin >> menu;
 
         // Validar a escolha das opcoes
-        while (menu<1 || menu>3){
+        while (menu < 1 || menu > 3) {
             cout << "\nErro: opcao invalida!!!" << endl;
             cout << "Digite a opcao que voce deseja: ";
             cin >> menu;
         }
 
-        if (menu == 1){
-            // Coletando os dados
-            for (int i = 0; i < TAM; i++){
-                getline(arquivoP, perguntas[i]);     // Dados das perguntas
-                for (int j = 0; j < 4; j++){
-                    getline(arquivoP, opcoes[i][j]); // Dados das alternativas
+        switch (menu) {
+            case 1:
+                // Coletando os dados
+                for (int i = 0; i < TAM; i++) {
+                    getline(arquivoP, perguntas[i]);     // Dados das perguntas
+                    for (int j = 0; j < 4; j++) {
+                        getline(arquivoP, opcoes[i][j]); // Dados das alternativas
+                    }
+                    getline(arquivoP, correta[i]);
                 }
-                getline(arquivoP, correta[i]);
-            }
 
-            
-            // Verificando as perguntas e alternativas
-            cout << endl;
-            for (int i = 0; i < TAM; i++){
-                // Agora as perguntas são exibidas na ordem do arquivo, sem sorteio
-                cout << i+1 << "-" << perguntas[i] << endl;
-                for (int j = 0; j < 4; j++){
-                    cout << opcoes[i][j] << endl;
+                // Verificando as perguntas e alternativas
+                cout << endl;
+                for (int i = 0; i < TAM; i++) {
+                    cout << i + 1 << "-" << perguntas[i] << endl;
+                    for (int j = 0; j < 4; j++) {
+                        cout << opcoes[i][j] << endl;
+                    }
+                    cout << "R: ";
+                    cin >> resposta[i];
+                    if (resposta[i] == correta[i]) {
+                        cout << "\nParabens voce acertou!!!" << endl;
+                    }
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 }
-                cout << "R: ";
-                cin >> resposta[i];
-                if(resposta[i]==correta[i]){
-                    cout << "\nParabens voce acertou!!!" << endl;
+                break;
+
+            case 2:
+                cout << "\nVoce esta em terceiro lugar no ranking!!!" << endl;
+                cout << "\nDeseja continuar no jogo [1]-Sim ou [2]-Nao: ";
+                cin >> menu;
+                if (menu == 2) {
+                    menu = 3;
+                    cout << "\nObrigado por acessar meu jogo, volte sempre!!!" << endl;
                 }
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            }
-        }
-        else if (menu == 2){
-            cout << "\nVoce esta em terceiro lugar no ranking!!!" << endl;
-            cout << "\nDeseja continuar no jogo [1]-Sim ou [2]-Nao: ";
-            cin >> menu;
-            if(menu == 2){
-                menu = 3;
-                cout << "\nObrigado por acessar meu jogo, volte sempre!!!" << endl;
-            }
-        }
-        else{
-            cout << "\nVolte sempre, basta executar o jogo novamente!";
+                break;
+
+            case 3:
+                cout << "\nVolte sempre, basta executar o jogo novamente!";
+                break;
         }
     }
 
