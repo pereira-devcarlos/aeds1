@@ -37,7 +37,7 @@ int main(){
     
     // Exibir Menu
     while(opcao != 0){
-        cout << "Menu de Opçoes:" << endl;
+        cout << "\nMenu de Opcoes:" << endl;
         cout << "[1]-Exibir dados dos alunos" << endl;
         cout << "[2]-Exibir a media das notas da turma" << endl;
         cout << "[3]-Exibir dados dos alunos aprovados" << endl;
@@ -47,9 +47,14 @@ int main(){
         cin >> opcao;
 
         switch (opcao){
+        case 0:
+            //Sair do loop
+            break;
+
         case 1:
             // Imprimir dados dos alunos
             cout << "\nDados dos alunos:" << endl;
+            cout << "------------------------" << endl;
             for (i = 0; i < TAM; i++){
                 cout << "Nome: " << aluno[i].nome << endl;
                 cout << "Nota: " << aluno[i].nota << endl;
@@ -58,11 +63,32 @@ int main(){
             break;
         case 2:
             // Exibindo a média das notas
-            cout << "A media das notas da turma e: " << media << endl;
+            cout << "\nA media das notas da turma e: " << media << endl;
             cout << "------------------------" << endl;            
             break;
         case 3:
-            
+            cout << "\nAlunos Aprovados:" << endl;
+            for (int j=0 , i = 0; i < TAM; i++){
+                if(aluno[i].nota>=7){
+                    cout << "Aluno " << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
+                }else{
+                    j++;
+                    if(j>=TAM)
+                        cout << "Nessa turma nenhum aluno foi aprovado." << endl;
+                }
+            }
+            break;
+        case 4:
+            cout << "\nAlunos Reprovados:" << endl;
+            for (int j=0 , i = 0; i < TAM; i++){
+                if(aluno[i].nota<7){
+                    cout << "Aluno " << aluno[i].nome << " tirou nota " << aluno[i].nota << endl;
+                }else{
+                    j++;
+                    if(j>=TAM)
+                        cout << "Nessa turma nenhum aluno foi reprovado." << endl;
+                }
+            }            
             break;
         default:
             cout << "Erro: opcao inexistente, porfavor escolha uma opcao valida!" << endl;
