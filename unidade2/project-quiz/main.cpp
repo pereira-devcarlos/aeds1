@@ -25,8 +25,8 @@ int main(){
     ifstream arquivoP("perguntas.txt");
     //Coletar os dados dos jogadores em arquivo externo
     ofstream arquivoE("jogadores.txt", ios::app); // ios::app para que não apague o que já estava escrito
-    if(!arquivoP.is_open() && !arquivoE.is_open()){
-        cout << "Erro: algum dos arquivo nao foram abertos corretamente!"<< endl;
+    if(!arquivoP.is_open() || !arquivoE.is_open()){
+        cout << "Erro: algum dos arquivos nao foi aberto corretamente!" << endl;
         return 1;
     }
 
@@ -39,7 +39,8 @@ int main(){
     string correta[TAM];
     string resposta[TAM];
 
-    cin >> player[0].name;
+    cout << "Digite seu nome: ";
+    getline(cin, player[0].name);
     arquivoE << player[0].name << endl;
 
     menu = 2; // Valor para iniciar a repetição
@@ -71,15 +72,14 @@ int main(){
             // Verificando as perguntas e alternativas
             cout << endl;
             for (int i = 0; i < TAM; i++){
-                int random = rand() % TAM; // Gerar pergunta aleatória
-
-                cout << i+1 << "-" << perguntas[random] << endl;
+                // Agora as perguntas são exibidas na ordem do arquivo, sem sorteio
+                cout << i+1 << "-" << perguntas[i] << endl;
                 for (int j = 0; j < 4; j++){
-                    cout << opcoes[random][j] << endl;
+                    cout << opcoes[i][j] << endl;
                 }
                 cout << "R: ";
-                cin >> resposta[random];
-                if(resposta[random]==correta[random]){
+                cin >> resposta[i];
+                if(resposta[i]==correta[i]){
                     cout << "\nParabens voce acertou!!!" << endl;
                 }
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
