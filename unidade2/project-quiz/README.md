@@ -66,11 +66,11 @@ O quiz inclui questões como:
 
 ## 🚀 Desafios Extras  
 ```markdown
-- [ ] Adicionar 20+ perguntas  
-- [ ] Implementar cronômetro por questão  
-- [ ] Sistema de dicas (3 por jogo)  
-- [ ] Salvar ranking em arquivo  
-- [ ] Adicionar temas (C++, Python, Java)  
+- [❌] Adicionar 20+ perguntas  
+- [❌] Implementar cronômetro por questão  
+- [❌] Sistema de dicas (3 por jogo)  
+- [✔️] Salvar ranking em arquivo  
+- [❌] Adicionar temas (C++, Python, Java)  
 ```
 
 ## 📌 Requisitos Técnicos  
