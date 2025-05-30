@@ -91,6 +91,14 @@ int main(){
                 break;
 
             case 2:
+                // Reabrir o arquivo para garantir leitura correta
+                arquivoJ.close();
+                arquivoJ.open("jogadores.txt");
+                if (!arquivoJ.is_open()) {
+                    cout << "Erro ao abrir jogadores.txt para leitura do ranking!" << endl;
+                    break;
+                }
+
                 // Leitura dos dados dos jogadores
                 for (int i = 0; i < 5; i++){
                     getline(arquivoJ, player[i].name);
