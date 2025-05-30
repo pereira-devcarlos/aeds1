@@ -1,10 +1,8 @@
 #include <iostream>  // E/S básica
-#include <fstream>   // Leitura de dados externos
-#include <vector>    // Armazenamento
-#include <algorithm> // Ordenação
-#include <ctime>     // Acesso ao horário
-#include <stdlib.h>  // Aleatoriedade
-#include <string>
+#include <fstream>   // Leitura e escrita de arquivos
+#include <ctime>     // Para srand e time
+#include <string>    // Para usar string
+#include <limits>
 
 using namespace std;
 
@@ -17,9 +15,6 @@ struct jogador{
 int main(){
     const int TAM=10; // Constante para definir os tamanhos dos vetores
     int menu;
-
-    //Valores Aleatórios
-    srand(time(NULL));  //Gerar seed de acordo com as horas do meu pc
     
     //Definindo a entrada das perguntas de um arquivo texto
     ifstream arquivoP("perguntas.txt");
@@ -130,7 +125,7 @@ int main(){
 
                 // Exibir Ranking
                 cout << "\n     Ranking Quiz C++" << endl;
-                cout << "==========================" << endl;
+                cout << "\n==========================" << endl;
                 for (int i = 0; i < 3; i++){
                     cout << "\t" << i+1 << " Lugar" << endl;
                     cout << "   " << player[i].name << " " << player[i].pontos << "pts" << endl;
