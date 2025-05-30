@@ -4,13 +4,13 @@
 #include <algorithm> // Ordenação
 #include <ctime>     // Acesso ao horário
 #include <stdlib.h>  // Aleatoriedade
+#include <string>
 
 using namespace std;
 
 struct jogador{
     string name;
     int pontos;
-    int rank;
 };
 
 
@@ -23,15 +23,18 @@ int main(){
     
     //Definindo a entrada das perguntas de um arquivo texto
     ifstream arquivoP("perguntas.txt");
+    ifstream arquivoJ("jogadores.txt");
     //Coletar os dados dos jogadores em arquivo externo
     ofstream arquivoE("jogadores.txt", ios::app); // ios::app para que não apague o que já estava escrito
-    if(!arquivoP.is_open() || !arquivoE.is_open()){
+    if(!arquivoP.is_open() && !arquivoE.is_open() && !arquivoJ.is_open()){
         cout << "Erro: algum dos arquivos nao foi aberto corretamente!" << endl;
         return 1;
     }
 
     //Declarar os jogadores
     jogador player[10];
+
+    player[0].pontos=0;
     
     //Declaração dos vetores
     string perguntas[TAM];
@@ -41,7 +44,6 @@ int main(){
 
     cout << "Digite seu nome: ";
     getline(cin, player[0].name);
-    arquivoE << player[0].name << endl;
 
     menu = 2; // Valor para iniciar a repetição
     while (menu != 3) {
@@ -70,23 +72,34 @@ int main(){
                 }
 
                 // Verificando as perguntas e alternativas
-                cout << endl;
                 for (int i = 0; i < TAM; i++) {
-                    cout << i + 1 << "-" << perguntas[i] << endl;
+                    cout << endl << i + 1 << "-" << perguntas[i] << endl;
                     for (int j = 0; j < 4; j++) {
                         cout << opcoes[i][j] << endl;
                     }
                     cout << "R: ";
                     cin >> resposta[i];
+                    resposta[i][0] = toupper(resposta[i][0]);
                     if (resposta[i] == correta[i]) {
-                        cout << "\nParabens voce acertou!!!" << endl;
+                        player[0].pontos+=10;
                     }
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 }
+                cout << player[0].name << " obteve " << player[0].pontos << endl;
+                arquivoE << player[0].name << endl;
+                arquivoE << player[0].pontos << endl;
                 break;
 
             case 2:
-                cout << "\nVoce esta em terceiro lugar no ranking!!!" << endl;
+                // Leitura dos dados dos jogadores
+                for (int i = 0; i < 5; i++){
+                    getline(arquivoJ, player[i].name);
+                    string pontoString;
+                    getline(arquivoJ, pontoString);
+                    player[i].pontos = stoi(pontoString); // converte string para int
+                    cout << player[i].name << " tem " << player[i].pontos << endl;
+                }
+                
                 cout << "\nDeseja continuar no jogo [1]-Sim ou [2]-Nao: ";
                 cin >> menu;
                 if (menu == 2) {
