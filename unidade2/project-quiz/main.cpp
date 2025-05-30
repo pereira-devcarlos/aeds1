@@ -15,7 +15,7 @@ struct jogador{
 
 
 int main(){
-    const int TAM=5; // Constante para definir os tamanhos dos vetores
+    const int TAM=10; // Constante para definir os tamanhos dos vetores
     int menu;
 
     //Valores Aleatórios
@@ -44,6 +44,11 @@ int main(){
 
     cout << "Digite seu nome: ";
     getline(cin, player[0].name);
+    // Remove espaços do início e fim (opcional, mas recomendado)
+    while (player[0].name.empty() || player[0].name.find_first_not_of(' ') == string::npos) {
+        cout << "Nome inválido! Digite seu nome: ";
+        getline(cin, player[0].name);
+    }
 
     menu = 2; // Valor para iniciar a repetição
     while (menu != 3) {
