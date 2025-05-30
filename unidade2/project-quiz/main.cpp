@@ -95,11 +95,26 @@ int main(){
                 for (int i = 0; i < 5; i++){
                     getline(arquivoJ, player[i].name);
                     string pontoString;
-                    getline(arquivoJ, pontoString);
+                    getline(arquivoJ, pontoString);       // Lendo os pontos como string
                     player[i].pontos = stoi(pontoString); // converte string para int
                     cout << player[i].name << " tem " << player[i].pontos << endl;
                 }
-                
+
+                // Ordenar o vetor para que fique do maior para o menor
+                for (int i = 0; i < 4; i++){
+                    for (int k=0 ,j=0; j < 4 - i -1 ; j++){
+                        string temp;
+                        if (player[j].pontos< player[j+1].pontos){
+                            k = player[j].pontos;
+                            temp = player[j].name;
+                            player[j].pontos = player[j+1].pontos;
+                            player[j].name = player[j+1].name;
+                            player[j+1].pontos = k;
+                            player[j+1].name = temp;                            
+                        }
+                    }
+                }  
+
                 cout << "\nDeseja continuar no jogo [1]-Sim ou [2]-Nao: ";
                 cin >> menu;
                 if (menu == 2) {
