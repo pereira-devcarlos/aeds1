@@ -110,10 +110,19 @@ int main(){
                             player[j].pontos = player[j+1].pontos;
                             player[j].name = player[j+1].name;
                             player[j+1].pontos = k;
-                            player[j+1].name = temp;                            
+                            player[j+1].name = temp;                          
                         }
                     }
-                }  
+                }
+
+                // Exibir Ranking
+                cout << "\n     Ranking Quiz C++" << endl;
+                cout << "==========================" << endl;
+                for (int i = 0; i < 3; i++){
+                    cout << "\t" << i+1 << " Lugar" << endl;
+                    cout << "   " << player[i].name << " " << player[i].pontos << "pts" << endl;
+                    cout << "==========================" << endl;
+                }    
 
                 cout << "\nDeseja continuar no jogo [1]-Sim ou [2]-Nao: ";
                 cin >> menu;
