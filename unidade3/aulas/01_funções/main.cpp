@@ -6,12 +6,9 @@
 
 #include <cstdlib>
 #include <iostream>
+#include "../01_funções/lib/ordenacao.h"
 
 using namespace std;
-
-// Declaração das funções utilizadas
-void listaVetor(int v[], int tam);
-void bubbleSort(int v[], int tam);
 
 int main() {
     // Declaração e inicialização do vetor de inteiros
@@ -44,30 +41,4 @@ int main() {
     cout << "\nVetor decrescente depois da ordenação" << endl;
     listaVetor(numDec, 10);
     return 0;
-}
-
-// Função para listar (imprimir) os elementos do vetor
-void listaVetor(int v[], int tam){
-    for(int i = 0; i < tam; i++){
-        // Imprime o índice (começando do 1) e o valor correspondente
-        cout << i+1 << "º valor: " << v[i] << endl;
-    }
-    cout << endl;
-}
-
-// Função que implementa o algoritmo de ordenação bubble sort
-void bubbleSort(int v[], int tam) {
-    int i, j, aux;
-    // Laço externo: controla o número de passagens pelo vetor
-    for (i = tam - 1; i >= 1; i--){
-        // Laço interno: percorre o vetor até a posição i
-        for ( j = 0; j < i; j++){
-            // Se o elemento atual é maior que o próximo, troca os dois
-            if (v[j] > v[j+1]){
-                aux = v[j];         // Guarda o valor de v[j] em aux
-                v[j] = v[j+1];      // Atribui o valor de v[j+1] em v[j]
-                v[j+1] = aux;       // Coloca o valor de aux em v[j+1]
-            }
-        }   
-    }
 }
