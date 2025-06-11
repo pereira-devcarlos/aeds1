@@ -13,9 +13,7 @@ using namespace std;
 void listaVetor(int v[], int tam);
 void bubbleSort(int v[], int tam);
 
-/*
- * Função principal do programa
- */
+
 int main() {
     // Declaração e inicialização do vetor de inteiros
     int num[]={10, 3, 5, 6, 7, 1, 9, 2, 4, 8};
