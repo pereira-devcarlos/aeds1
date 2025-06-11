@@ -10,6 +10,7 @@
 using namespace std;
 
 void listaVetor(int v[], int tam);
+void bubbleSort(int v[], int tam);
 
 /*
  * 
@@ -21,12 +22,30 @@ int main() {
     listaVetor(num, 10);
     
     cout << "\nVetor depois da ordenação" << endl;
+    bubbleSort(num, 10);
+    listaVetor(num, 10);
+    cout << endl;
 
     return 0;
 }
 
+// Listagem do vetor
 void listaVetor(int v[], int tam){
     for(int i = 0; i < tam; i++){
         cout << i+1 << "º valor: " << v[i] << endl;
+    }
+}
+
+// Declaração do bubble sort
+void bubbleSort(int v[], int tam) {
+    for (int i = 0; i < tam - 1; i++) {
+        for (int j = 0; j < tam - i - 1; j++) {
+            if (v[j] > v[j + 1]) {
+                // Troca os elementos
+                int temp = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = temp;
+            }
+        }
     }
 }
