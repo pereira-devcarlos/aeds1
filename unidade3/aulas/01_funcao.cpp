@@ -38,14 +38,14 @@ void listaVetor(int v[], int tam){
 
 // Declaração do bubble sort
 void bubbleSort(int v[], int tam) {
-    for (int i = 0; i < tam - 1; i++) {
-        for (int j = 0; j < tam - i - 1; j++) {
-            if (v[j] > v[j + 1]) {
-                // Troca os elementos
-                int temp = v[j];
-                v[j] = v[j + 1];
-                v[j + 1] = temp;
+    int i, j, aux;
+    for (i = tam - 1; i > 1; i--){
+        for ( j = 0; j < i; j++){
+            if (v[j] > v[j+1]){
+                aux = v[j];
+                v[j] = v[j+1];
+                v[j+1] = aux;
             }
-        }
+        }   
     }
 }
