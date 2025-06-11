@@ -22,10 +22,14 @@ int main() {
     int numCres[]={1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int numDec[]={10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     
-    // Exibe o vetor antes da ordenação
+    // Exibe os vetores antes das ordenações
     cout << "\nVetor antes da ordenação:" << endl;
     listaVetor(num, 10);
+
+    cout << "\nVetor crescente antes da ordenação" << endl;
     listaVetor(numCres, 10);
+
+    cout << "\nVetor decrescente antes da ordenação" << endl;
     listaVetor(numDec, 10);
     
     // Ordena o vetor usando bubble sort
