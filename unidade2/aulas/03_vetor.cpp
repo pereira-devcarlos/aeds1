@@ -30,7 +30,7 @@ int main() {
     int i, j;
 
     // Definindo o arquivo como entrada de dados externos
-    ifstream arquivo("valores.txt"); // Alterado de alturas.txt para valores.txt
+    ifstream arquivo("../data/valores.txt"); // Alterado de alturas.txt para valores.txt
     if (!arquivo.is_open()) {
         cout << "Erro: arquivo não foi aberto corretamente";
         return 1;
