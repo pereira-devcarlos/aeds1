@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+// Definição da struct Turmas, que armazena matrícula e duas notas
 struct Turmas {
     int matricula;
     float nota1, nota2;
 };
 
 int main(){
+    // Inicializa um vetor de 30 alunos com matrícula e duas notas cada
     struct Turmas turma[30] = {
         {1001, 8.5, 7.0}, {1002, 7.2, 6.5}, {1003, 9.1, 8.8}, {1004, 6.8, 7.3},
         {1005, 7.9, 8.0}, {1006, 5.5, 6.0}, {1007, 8.0, 7.5}, {1008, 6.0, 5.8},
@@ -18,6 +20,7 @@ int main(){
     };
 
     printf("\nResultado das notas:");
+    // Calcula e exibe a média de cada aluno
     for (int i = 0; i < 30; i++){
         float media = (turma[i].nota1 + turma[i].nota2) / 2;
         printf("\nAluno %d:\nRA: %d\nMedia: %.2f\n", i+1, turma[i].matricula, media);
