@@ -54,17 +54,25 @@ A disciplina está dividida em quatro unidades práticas:
 
 ```bash
 aeds1/
+│
+├── entregar-tarefas/
+│   ├── 01-tarefa
+│   └── 02-tarefa
+│
 ├── unidade1/
 │   └── condicionais_repeticoes
+│
 ├── unidade2/
 │   └── vetores_matrizes
+│
 ├── unidade3/
 │   └── modularizacao_projeto
+│
 ├── unidade4/
 │   └── ponteiros_dinamica
-├── projetos/
-│   ├── projeto1.c
-│   └── projeto2.c
+│
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
