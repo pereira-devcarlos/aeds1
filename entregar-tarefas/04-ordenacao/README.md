@@ -27,11 +27,11 @@ Implementar algoritmos de ordenação clássicos (Bubble Sort, Selection Sort, I
 ```
 /04-ordenacao
 │
-├── include/                # Arquivo ordenacao.h que contém as declarações das funções
-│   └── ordenacao.h
-│
 ├── docs/                   # PDF dos algoritmos de ordenação
 │   └── algoritmos.pdf
+│
+├── include/                # Arquivo ordenacao.h que contém as declarações das funções
+│   └── ordenacao.h
 │
 ├── src/                    # Códigos-fonte (.cpp)
 │   ├── main.cpp
