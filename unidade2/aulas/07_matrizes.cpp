@@ -45,6 +45,7 @@ int main(){
 
     // Somar as 2 matrizes
     somarMatrizes(mat1, mat2, resultSoma, TAM);
+    // Exibindo a matriz após a soma
     cout << "\nMatriz 1 + Matriz 2:" << endl;
     for (size_t i = 0; i < TAM; i++){
         for (size_t j = 0; j < TAM; j++){
