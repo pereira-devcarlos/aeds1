@@ -45,8 +45,8 @@ int main(){
         }
         cout << endl;
     }
-    cout << endl;
-    cout << "Matriz 2:" << endl;
+
+    cout << "\nMatriz 2:" << endl;
     for (int i = 0; i < TAM; i++){
         for (int j = 0; j < TAM; j++){
             cout << mat2[i][j] << " ";
@@ -80,14 +80,13 @@ int main(){
     }
 
     // Exibir a matriz após a multiplicação
-    cout << "\nMatriz 1 * Matriz 2:" << endl;
+    cout << "\nMatriz 1 x Matriz 2:" << endl;
     for (int i = 0; i < TAM; i++){
         for (int j = 0; j < TAM; j++){
             cout << resultMult[i][j] << " ";
         }
         cout << endl;
-    }    
-
+    }
 
     return 0;
 }
