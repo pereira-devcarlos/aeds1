@@ -46,7 +46,6 @@ Implementar algoritmos de ordenação clássicos (Bubble Sort, Selection Sort, I
 
 ```cpp
 // ordenacao.h
-#pragma once
 
 void bubbleSort(int* begin, int* end);
 void selectionSort(int* begin, int* end);
