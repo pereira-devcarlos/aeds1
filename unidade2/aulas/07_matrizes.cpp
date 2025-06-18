@@ -3,11 +3,16 @@
 using namespace std;
 
 void somarMatrizes(int mat1[][3], int mat2[][3], int result[][3]){
-    
+    for (size_t i = 0; i < TAM; i++){
+        for (size_t j = 0; j < 3; j++){
+            result[i][j] = mat1[i][j] + mat2[i][j];
+        }
+    }
 }
 
+const int TAM = 3;
+
 int main(){
-    const int TAM = 3;
     // Declarando as matrizes
     int mat1[TAM][TAM] = {
         {1, 2, 3},
@@ -19,6 +24,7 @@ int main(){
         {6, 5, 4},
         {3, 2, 1}
     };
+    int resultSoma[TAM][TAM];
 
     // Imprimir as matrizes
     cout << "Matriz 1:" << endl;
