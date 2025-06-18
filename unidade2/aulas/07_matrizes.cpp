@@ -10,6 +10,16 @@ void somarMatrizes(int mat1[][3], int mat2[][3], int result[][3], int TAM){
     }
 }
 
+// Função que retorna a soma de todos os elementos das duas matrizes
+int somaTotalMatrizes(int mat1[][3], int mat2[][3], int TAM) {
+    int soma = 0;
+    for (int i = 0; i < TAM; i++) {
+        for (int j = 0; j < 3; j++) {
+            soma += mat1[i][j] + mat2[i][j];
+        }
+    }
+    return soma;
+}
 
 int main(){
     const int TAM = 3;
@@ -53,7 +63,10 @@ int main(){
         }
         cout << endl;
     }
-    
+
+    int soma = somaTotalMatrizes(mat1, mat2, TAM);
+
+    cout << "\nSoma total dos elementos das duas matrizes: " << soma << endl;
 
     return 0;
 }
