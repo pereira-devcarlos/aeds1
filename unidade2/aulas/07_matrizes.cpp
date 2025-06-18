@@ -74,7 +74,7 @@ int main(){
     for (int i = 0; i < TAM; i++){
         for (int j = 0; j < TAM; j++){
             for (int k = 0; k < TAM; k++){
-                resultMult[i][j] = mat1[j][k] * mat2[k][j];
+                resultMult[i][j] = mat1[i][k] * mat2[k][j];
             }
         }
     }
