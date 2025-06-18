@@ -35,6 +35,7 @@ int main(){
         {5, 12, 1}
     };
     int resultSoma[TAM][TAM];
+    int resultMult[TAM][TAM];
 
     // Imprimir as matrizes
     cout << "Matriz 1:" << endl;
@@ -57,16 +58,27 @@ int main(){
     somarMatrizes(mat1, mat2, resultSoma, TAM);
     // Exibindo a matriz após a soma
     cout << "\nMatriz 1 + Matriz 2:" << endl;
-    for (size_t i = 0; i < TAM; i++){
-        for (size_t j = 0; j < TAM; j++){
+    for (int i = 0; i < TAM; i++){
+        for (int j = 0; j < TAM; j++){
             cout << resultSoma[i][j] << " ";
         }
         cout << endl;
     }
 
+    // Somar todos os elementos da matriz
     int soma = somaTotalMatrizes(mat1, mat2, TAM);
-
+    // Exibir o total da soma dos elementos
     cout << "\nSoma total dos elementos das duas matrizes: " << soma << endl;
+
+    // Multiplicação das matrizes
+    for (int i = 0; i < TAM; i++){
+        for (int j = 0; j < TAM; j++){
+            for (int k = 0; k < TAM; k++){
+                resultMult[i][j] = mat1[j][k] * mat2[k][j];
+            }
+        }
+    }
+
 
     return 0;
 }
