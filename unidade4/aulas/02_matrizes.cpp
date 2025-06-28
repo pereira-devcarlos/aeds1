@@ -23,7 +23,7 @@ int main(){
 
     // Usando ponteiros para percorrer as matrizes como se fossem vetores
     // p aponta para o primeiro elemento de m1
-    // q aponta para o primeiro elemento de m2
+    // q aponta para o primeiro elemento de m2.........................................+9999999
     // r aponta para o primeiro elemento de m3
     // O loop vai até o último elemento (dim1*dim2 elementos)
     for (
