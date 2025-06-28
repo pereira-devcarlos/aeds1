@@ -7,52 +7,82 @@
 * Local: Unifal Santa Clara
 */
 
-#include <iostream>
 #include "MatrizPonteiro.h"
 
+// Multiplica todos os elementos da matriz por um valor
+void multiplicar(Vetor* m, int valor) {
+    int* p = &(*m)[0][0];
+    int* fim = p + TAM * TAM;
 
-//multiplica todos os valores de uma matriz por um valor usando ponteiros
-void MultiplicarValores(Vetor matriz, int linhas, int colunas, int valor) {
-    int *p = &matriz[0][0];
-    for (int i = 0; i < linhas * colunas; i++, p++) {
-        *p *= valor;
+    while (p < fim) {
+        *p *= valor; // Multiplica o elemento atual por 'valor'
+        p++;
     }
 }
 
-//encontra a matriz transposta de uma matriz usando ponteiros
-void TransporMatriz(Vetor matriz, int linhas, int colunas, Vetor transposta) {
-    int *orig = &matriz[0][0];
-    for (int i = 0; i < linhas; i++) {
-        for (int j = 0; j < colunas; j++) {
-            *(&transposta[0][0] + j * linhas + i) = *(orig + i * colunas + j);
+// Transpõe a matriz (sem usar índices)
+void transposta(Vetor* m, Vetor* resultado) {
+    int* pOrigem = &(*m)[0][0];
+
+    int linha = 0;
+    while (linha < TAM) {
+        int coluna = 0;
+        while (coluna < TAM) {
+            // Calcula o endereço do elemento transposto
+            int* pDestino = &(*resultado)[0][0] + coluna * TAM + linha;
+            *pDestino = *(pOrigem + linha * TAM + coluna); // Copia o valor transposto
+            coluna++;
         }
+        linha++;
     }
 }
 
-//inverte as colunas de uma matriz usando ponteiros (sem usar índices diretamente)
-void InverterColunas(Vetor matriz, int linhas, int colunas) {
-    for (int i = 0; i < linhas; i++) {
-        int *inico = &matriz[i][0];              // Ponteiro para o início da linha
-        int *fim = &matriz[i][colunas - 1];      // Ponteiro para o final da linha
-        for (int j = 0; j < colunas / 2; j++, inico++, fim--) {
-            // Troca os elementos das extremidades, avançando e recuando os ponteiros
-            int temp = *inico;
-            *inico = *fim;
-            *fim = temp;
+// Inverte as colunas horizontalmente
+void inverterColunas(Vetor* m) {
+    int* linha = &(*m)[0][0];
+    int linhaAtual = 0;
+
+    while (linhaAtual < TAM) {
+        int* esq = linha;           // Ponteiro para o início da linha
+        int* dir = linha + TAM - 1; // Ponteiro para o final da linha
+
+        while (esq < dir) {
+            int tmp = *esq;
+            *esq = *dir; // Troca os elementos das extremidades
+            *dir = tmp;
+            esq++;
+            dir--;
         }
+
+        linha += TAM;      // Vai para a próxima linha
+        linhaAtual++;
     }
 }
 
-//inverte as linhas de uma matriz usando ponteiros (sem usar índices diretamente)
-void InverterLinhas(Vetor matriz, int linhas, int colunas) {
-    for (int j = 0; j < colunas; j++) {
-        int *inicio = &matriz[0][j];                 // Ponteiro para o inicio da coluna
-        int *fim = &matriz[linhas - 1][j];           // Ponteiro para o fim da coluna
-        for (int i = 0; i < linhas / 2; i++, inicio += colunas, fim -= colunas) {
-            // Troca os elementos das extremidades, descendo e subindo os ponteiros
-            int temp = *inicio;
-            *inicio = *fim;
-            *fim = temp;
+// Inverte as linhas verticalmente
+void inverterLinhas(Vetor* m) {
+    int* topo = &(*m)[0][0];                // Ponteiro para a primeira linha
+    int* baixo = topo + (TAM - 1) * TAM;    // Ponteiro para a última linha
+
+    int linhasProcessadas = 0;
+
+    while (linhasProcessadas < TAM / 2) {
+        int* pt = topo;   // Ponteiro para a linha do topo
+        int* pb = baixo;  // Ponteiro para a linha do fundo
+        int count = 0;
+
+        while (count < TAM) {
+            int temp = *pt;
+            *pt = *pb;    // Troca os elementos das linhas
+            *pb = temp;
+
+            pt++;
+            pb++;
+            count++;
         }
+
+        topo += TAM;      // Avança para a próxima linha de cima
+        baixo -= TAM;     // Avança para a próxima linha de baixo
+        linhasProcessadas++;
     }
 }

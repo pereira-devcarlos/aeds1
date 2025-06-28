@@ -4,10 +4,16 @@
 const int TAM = 128;
 typedef int Vetor[TAM][TAM];
 
-void MultiplicarValores(Vetor matriz, int linhas, int colunas, int valor);
-void TransporMatriz(Vetor matriz, int linhas, int colunas, Vetor transposta);
-void InverterColunas(Vetor matriz, int linhas, int colunas);
-void InverterLinhas(Vetor matriz, int linhas, int colunas);
+// Multiplica todos os elementos da matriz por um valor
+void multiplicar(Vetor* m, int valor);
 
+// Calcula a matriz transposta e armazena no ponteiro 'resultado'
+void transposta(Vetor* m, Vetor* resultado);
+
+// Inverte as colunas da matriz (espelhamento horizontal)
+void inverterColunas(Vetor* m);
+
+// Inverte as linhas da matriz (espelhamento vertical)
+void inverterLinhas(Vetor* m);
 
 #endif
