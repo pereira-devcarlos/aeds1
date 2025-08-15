@@ -2,7 +2,7 @@
 
 > Repositório de estudos, exercícios e projetos desenvolvidos na disciplina de **Algoritmos e Estrutura de Dados I – Prática** (DCE794), do curso de **Ciência da Computação** – Universidade Federal de Alfenas (UNIFAL-MG).
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-%20Finalizado-yellow)
 ![Linguagem](https://img.shields.io/badge/Linguagem-C/C++-blue)
 ![Disciplina](https://img.shields.io/badge/Disciplina-AEDs%20I%20Pr%C3%A1tica-orange)
 ![Ano/Semestre](https://img.shields.io/badge/2025-1%C2%BA%20semestre-brightgreen)
